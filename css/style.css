@@ -1,71 +1,234 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-/* logo */
-#logo {
-    width: 70px;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* hero-section-start */
-.pic{
-    position: relative;
-    text-align: center;
-    background-color: black;
-    height: 290px;
-    width: 100%;
+body{
+    background:#f5f7f2;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
 }
-.pic img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.pic p{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color:rgba(4, 4, 4, 0.678);
-    color: gold;
-   font-size: 1.3rem;
-   font-weight: bold;
-   padding: 2rem;
-   border-radius: 2rem;
-}
-/* her-section-end */
 
-/* footer-start */
-.footer {
-    gap: 2rem;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
+/* NAVBAR */
+
+.custom-nav{
+    background:rgba(0,0,0,0.92);
+    backdrop-filter:blur(10px);
+    padding:1rem 0;
 }
-.icon {
-    display: flex;
-    gap: 2rem;
-    font-size: 2rem;
+
+.navbar-brand img{
+    width:65px;
 }
-.icon a{
-    color: aliceblue;   
+
+.logo-title{
+    color:white;
+    font-weight:bold;
 }
-.icon a:hover {
-    color:rgb(163, 212, 229);
-    font-size: 2.05rem;
+
+.navbar-brand small{
+    color:#cfcfcf;
 }
-.p p {
-    color: aliceblue; 
-    font-size: 1.4rem;
-    font-weight: 400;
+
+.nav-link{
+    color:white !important;
+    font-weight:600;
+    transition:0.3s;
 }
-/* footer-end */
-/* card-image-start */
-.card-img-top {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
+
+.nav-link:hover,
+.nav-link.active{
+    color:#39b37d !important;
 }
-/* card-image-end */
+
+.my-list-btn{
+    background:#1f7a5b;
+    border:none;
+    color:white;
+    padding:0.8rem 1.5rem;
+    border-radius:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.my-list-btn:hover{
+    background:#14543f;
+}
+
+/* HERO */
+
+.hero-section{
+    height:85vh;
+    background:url("../images/weekly.png") center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+}
+
+.badge-custom{
+    background:white;
+    color:#111;
+    padding:0.7rem 1rem;
+    border-radius:30px;
+    font-weight:bold;
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    margin-bottom:2rem;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    font-weight:900;
+    line-height:1.1;
+}
+
+.hero-content h1 span{
+    color:#39b37d;
+}
+
+.hero-content p{
+    max-width:600px;
+    margin:1.5rem 0;
+    font-size:1.2rem;
+}
+
+.sort-btn{
+    background:#1f7a5b;
+    border:none;
+    color:white;
+    padding:1rem 2rem;
+    border-radius:15px;
+    font-size:1rem;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.sort-btn:hover{
+    background:#14543f;
+    transform:translateY(-2px);
+}
+
+/* PRODUCTS */
+
+.products-section{
+    padding:5rem 0;
+}
+
+.card{
+    border:none;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
+    background:white;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card-img-top{
+    width:100%;
+    height:280px;
+    object-fit:contain;
+    padding:1rem;
+    background:white;
+}
+
+.card-body{
+    padding:1.5rem;
+}
+
+.card-title{
+    font-size:1.6rem;
+    font-weight:bold;
+}
+
+.card-text{
+    color:#666;
+}
+
+.likes{
+    padding:0.5rem 0.8rem;
+    border-radius:10px;
+    color:white;
+    font-weight:bold;
+}
+
+.likesBtn{
+    border-radius:12px;
+    padding:0.7rem 1.2rem;
+    font-weight:bold;
+}
+
+.reduceBtn{
+    border-radius:12px;
+    padding:0.7rem 1.2rem;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+.footer-section{
+    background:#07110d;
+    padding:3rem 0;
+    text-align:center;
+}
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:1.5rem;
+    margin-bottom:2rem;
+}
+
+.social-icons a{
+    width:55px;
+    height:55px;
+    background:#13211c;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:1.3rem;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    background:#1f7a5b;
+    transform:translateY(-5px);
+}
+
+.footer-section p{
+    color:#d6d6d6;
+    margin:0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.7rem;
+}
+
+.hero-section{
+    height:70vh;
+}
+
+}
