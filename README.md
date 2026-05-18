@@ -13,7 +13,7 @@ A dynamic JavaScript app to manage weekly shopping items with priority sorting
 - JavaScript 
 
 ##  Live Demo
- http://darwish.codefactory.live/Weekly.Planner/
+https://suhaibdr.online/weeklyplanner/
 
 ##  Author
 **Suhaib Darwish**
